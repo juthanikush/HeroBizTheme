@@ -18,7 +18,7 @@ get_header();
 
             while(have_posts()):
                 the_post();
-                get_template_part('template-parts/post/content');
+                get_template_part('template-parts/post/content',get_post_format());
             endwhile;
 
             echo paginate_links([
@@ -32,6 +32,7 @@ get_header();
            
                 <h1>Nothing Found</h1>
         <?php endif; ?>
+        <?php get_sidebar(); ?>
     </main>
 </div>
 

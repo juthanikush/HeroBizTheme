@@ -9,7 +9,7 @@ get_header();
         <?php
             while(have_posts()) :
                 the_post();
-                get_template_part('template-parts/post/content');
+                get_template_part('template-parts/post/content',get_post_format());
             endwhile;
             //If Comments are open then we can show the comments template.
             if( comments_open() || get_comments_number()):
