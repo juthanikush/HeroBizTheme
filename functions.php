@@ -89,9 +89,10 @@ if(! function_exists('herobiz_setup')){
          */
         add_theme_support('post-formats',array('aside','gallery','link','image','quote','video','audio'));
 
-        // register_nav_menu(array(
-        //     'primary'=>esc_html__('primary','herobiz'),
-        // ));
+        register_nav_menus(array(
+            'primary'=>esc_html__('Primary','herobiz'),
+            'footer'=>esc_html__('Footer Menu','herobiz'),
+        ));
     }
 
 }
@@ -129,4 +130,19 @@ function herobiz_sidebar_widgets_init(){
     ));
 }
 add_action('widgets_init','herobiz_sidebar_widgets_init');
+/**
+ * Enqueue public scripts and styles.
+ */
+function herobiz_public_scripts(){
+
+}
+add_action('wp_enqueue_scripts','herobiz_public_scripts');
+
+/***
+ * Enqueue admin scripts and styles.
+ */
+function herobiz_admin_scripts(){
+
+}
+add_action('admin_enqueue_scripts','herobiz_admin_scripts');
 ?>
