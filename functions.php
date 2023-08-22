@@ -92,6 +92,7 @@ if(! function_exists('herobiz_setup')){
         register_nav_menus(array(
             'primary'=>esc_html__('Primary','herobiz'),
             'footer'=>esc_html__('Footer Menu','herobiz'),
+            'header_action'=>esc_html__('Header Action','herobiz'),
         ));
     }
 
@@ -155,15 +156,6 @@ function herobiz_public_scripts(){
     wp_enqueue_script('validate',get_template_directory_uri().'/assets/vendor/php-email-form/validate.js',['jquery'],wp_rand(),true);
     
     wp_enqueue_script('main',get_template_directory_uri().'/assets/js/main.js',['jquery'],wp_rand(),true);
-//     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-//   <script src="assets/vendor/aos/aos.js"></script>
-//   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-//   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-//   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-//   <script src="assets/vendor/php-email-form/validate.js"></script>
-
-//   <!-- Template Main JS File -->
-//   <script src="assets/js/main.js"></script>
 }
 add_action('wp_enqueue_scripts','herobiz_public_scripts');
 

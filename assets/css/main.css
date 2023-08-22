@@ -227,6 +227,20 @@ section {
   margin-right: 6px;
 }
 
+.header_menu_action li {
+  list-style: none;
+}
+
+.header_menu_action li a{
+    font-size: 16px;
+    color: var(--color-white);
+    background: var(--color-primary);
+    padding:8px 23px;
+    border-radius: 4px;
+    transition: 0.3s;
+    font-family: var(--font-secondary);
+}
+
 .header .logo h1 {
   font-size: 32px;
   font-weight: 300;
